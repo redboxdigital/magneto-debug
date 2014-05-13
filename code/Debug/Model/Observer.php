@@ -69,12 +69,22 @@ class Magneto_Debug_Model_Observer {
             $blockStruct['class'] = get_class($block);
             $blockStruct['layout_name'] = $block->getNameInLayout();
             if( method_exists($block, 'getTemplateFile') ) {
-                $blockStruct['template'] = $block->getTemplateFile();
+            	try {
+                	$blockStruct['template'] = $block->getTemplateFile();
+            	} catch (Exception $e)
+            	{
+            		$blockStruct['template'] = '';
+            	}
             } else {
                 $blockStruct['template'] = '';
             }
             if( method_exists($block, 'getViewVars') ) {
-                $blockStruct['context'] = $block->getViewVars();
+            	try {
+            		$blockStruct['context'] = $block->getViewVars();	
+            	} catch (Exception $e) {
+            		$blockStruct['context'] = NULL;
+            	}
+                
             } else {
                 $blockStruct['context'] = NULL;
             }
