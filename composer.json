@@ -1,5 +1,5 @@
 {
-    "name": "magneto/debug",
+    "name": "redboxdigital/magneto-debug",
     "type": "magento-module",
     "description": "Magento Debug Toolbar",
     "homepage": "https://github.com/madalinoprea/magneto-debug",
