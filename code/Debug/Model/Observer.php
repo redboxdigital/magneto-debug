@@ -68,7 +68,7 @@ class Magneto_Debug_Model_Observer {
             $blockStruct = array();
             $blockStruct['class'] = get_class($block);
             $blockStruct['layout_name'] = $block->getNameInLayout();
-            if( method_exists($block, 'getTemplateFile') ) {
+            if( method_exists($block, 'getTemplateFile') && !($block instanceof Mage_Wishlist_Block_Customer_Wishlist_Item_Options) ) {
             	try {
                 	$blockStruct['template'] = $block->getTemplateFile();
             	} catch (Exception $e)
