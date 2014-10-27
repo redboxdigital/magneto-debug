@@ -1,9 +1,6 @@
 {
-    "name": "redboxdigital/magneto-debug",
+    "name": "rbd/magneto-debug",
     "type": "magento-module",
     "description": "Magento Debug Toolbar",
-    "homepage": "https://github.com/madalinoprea/magneto-debug",
-    "require": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+    "homepage": "https://github.com/redbox-digital/magneto-debug"
 }
